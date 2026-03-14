@@ -16,15 +16,103 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/styles.css">
     <style>
-        /* Additional styles specific for index links */
-        .brand-card {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+        /* Encapsulated index-specific styles */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
         }
 
-        .brand-card-link-btn {
-            margin-top: 25px;
+        .feature-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+            transition: var(--transition);
+            border-bottom: 3px solid transparent;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary);
+        }
+
+        .stat-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            color: white;
+            padding: 50px 20px;
+            border-radius: var(--border-radius);
+            margin: 60px 0;
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .stat-item h3 {
+            font-size: 3.5rem;
+            font-family: var(--font-head);
+            margin-bottom: 5px;
+        }
+
+        .stat-item p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            font-weight: 500;
+        }
+
+        .brand-preview-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .brand-preview-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .brand-preview-card {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            display: flex;
+            flex-direction: column;
+            background: white;
+            transition: var(--transition);
+        }
+
+        .brand-preview-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .brand-preview-img {
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: var(--font-head);
+            font-size: 3rem;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+        }
+
+        .brand-preview-content {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
         }
     </style>
 </head>
@@ -38,10 +126,9 @@
         <div class="hero-content">
             <h1 class="fade-up">La Pureza de los Andes en Cada Gota</h1>
             <p class="fade-up" style="animation-delay: 0.3s;">Descubre nuestras marcas de agua purificada, Yuraq y Kali,
-                elaboradas con los más altos estándares de
-                calidad en el corazón del Cusco.</p>
+                elaboradas con los más altos estándares de calidad en el corazón del Cusco.</p>
             <div class="hero-buttons fade-up" style="animation-delay: 0.6s;">
-                <a href="/marcas" class="btn btn-primary">Conocer las Marcas</a>
+                <a href="#proposito" class="btn btn-primary">Nuestra Promesa</a>
                 <a href="tel:906644944" class="btn btn-outline">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path
@@ -55,47 +142,176 @@
     </section>
 
     <main>
-        <section class="section-padding bg-light">
+        <!-- Propósito / Acerca de Ekalmad -->
+        <section class="section-padding" id="proposito">
             <div class="container fade-up">
                 <div class="section-title">
-                    <h2>Explora Ekalmad</h2>
-                    <p>Encuentra lo que buscas en nuestras secciones especializadas.</p>
+                    <span style="color: var(--primary); font-weight: 600; text-transform: uppercase;">Sobre
+                        Nosotros</span>
+                    <h2>Nuestra Promesa de Pureza</h2>
+                    <p style="max-width: 800px; margin: 0 auto; font-size: 1.1rem; line-height: 1.8;">Ekalmad EIRL nace
+                        con un propósito claro: brindar hidratación de la más alta calidad desde las montañas del Cusco
+                        para toda la región sur del Perú. Usamos tecnología de punta para purificar nuestra agua sin
+                        alterar su esencia natural, ofreciendo así un producto final seguro y lleno de vitalidad para ti
+                        y tu familia.</p>
+                </div>
+
+                <div class="stat-container fade-up">
+                    <div class="stat-item">
+                        <h3>100%</h3>
+                        <p>Agua Purificada</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>7</h3>
+                        <p>Fases de Filtración</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>+10</h3>
+                        <p>Presentaciones</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>24/7</h3>
+                        <p>Atención Continua</p>
+                    </div>
+                </div>
+
+                <div class="feature-grid">
+                    <div class="feature-card fade-up">
+                        <svg width="48" height="48" style="color: var(--primary); margin-bottom: 20px;"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                        </svg>
+                        <h3 style="font-size: 1.4rem; margin-bottom: 15px; color: var(--text-main);">Tecnología Avanzada
+                        </h3>
+                        <p style="color: var(--text-light); line-height: 1.6;">Nuestros procesos de ósmosis inversa,
+                            ozonización y rayos UV garantizan agua completamente libre de bacterias, toxinas y metales
+                            pesados.</p>
+                    </div>
+                    <div class="feature-card fade-up" style="animation-delay: 0.2s;">
+                        <svg width="48" height="48" style="color: var(--primary); margin-bottom: 20px;"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                        <h3 style="font-size: 1.4rem; margin-bottom: 15px; color: var(--text-main);">Distribución Segura
+                        </h3>
+                        <p style="color: var(--text-light); line-height: 1.6;">Llegamos a oficinas corporativas,
+                            restaurantes y hogares manteniendo estrictos controles de sanidad en nuestra flota de
+                            transporte.</p>
+                    </div>
+                    <div class="feature-card fade-up" style="animation-delay: 0.4s;">
+                        <svg width="48" height="48" style="color: var(--primary); margin-bottom: 20px;"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path
+                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                            </path>
+                            <path d="M2 12h20"></path>
+                        </svg>
+                        <h3 style="font-size: 1.4rem; margin-bottom: 15px; color: var(--text-main);">Compromiso
+                            Ecológico</h3>
+                        <p style="color: var(--text-light); line-height: 1.6;">Impulsamos programas de sostenibilidad
+                            como el retorno constante de envases para minimizar el impacto medioambiental.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Marcas Destacadas -->
+        <section class="section-padding bg-light" id="marcas">
+            <div class="container fade-up">
+                <div class="section-title">
+                    <span style="color: var(--primary); font-weight: 600; text-transform: uppercase;">Nuestras
+                        Líneas</span>
+                    <h2>Dos Identidades, Una Misma Pureza</h2>
+                    <p style="max-width: 800px; margin: 0 auto; font-size: 1.1rem;">Hemos desarrollado dos marcas
+                        principales para adaptarnos a tus requerimientos. Descubre qué línea va mejor contigo.</p>
+                </div>
+
+                <div class="brand-preview-grid">
+                    <!-- Preview YURAQ -->
+                    <div class="brand-preview-card fade-up">
+                        <div class="brand-preview-img"
+                            style="background-image: linear-gradient(rgba(14, 116, 144, 0.6), rgba(5, 150, 105, 0.7)), url('/images/hero-mountains.png');">
+                            YURAQ
+                        </div>
+                        <div class="brand-preview-content">
+                            <h3 style="color: var(--yuraq); font-size: 2rem; margin-bottom: 15px;">"Es Energía"</h3>
+                            <p style="color: var(--text-light); font-size: 1.05rem; line-height: 1.7; flex-grow: 1;">
+                                Nuestra línea clásica y familiar. Yuraq, que significa "blanco" en quechua, representa
+                                la pureza cristalina y vitalidad de nuestra tierra. Ideal para la hidratación familiar
+                                diaria y rutinas altamente deportivas.</p>
+                            <a href="/yuraq" class="btn btn-outline"
+                                style="border-color: var(--yuraq); color: var(--yuraq); margin-top: 25px; align-self: flex-start; padding: 12px 25px;">Ver
+                                Catálogo Yuraq</a>
+                        </div>
+                    </div>
+
+                    <!-- Preview KALI -->
+                    <div class="brand-preview-card fade-up" style="animation-delay: 0.2s;">
+                        <div class="brand-preview-img"
+                            style="background-image: linear-gradient(rgba(14, 116, 144, 0.7), rgba(30, 58, 95, 0.9)), url('/images/hero-mountains.png');">
+                            KALI
+                        </div>
+                        <div class="brand-preview-content">
+                            <h3 style="color: var(--kali-blue); font-size: 2rem; margin-bottom: 15px;">Línea Premium
+                            </h3>
+                            <p style="color: var(--text-light); font-size: 1.05rem; line-height: 1.7; flex-grow: 1;">
+                                Elegancia, sofisticación y un enfoque de diseño vanguardista. Kali está pensada para los
+                                restaurantes más exclusivos, oficinas ejecutivas, hoteles boutique y clientes que
+                                aprecian los detalles finos.</p>
+                            <a href="/kali" class="btn btn-outline"
+                                style="border-color: var(--kali-blue); color: var(--kali-blue); margin-top: 25px; align-self: flex-start; padding: 12px 25px;">Descubrir
+                                Kali</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Botones Especializados (Explora) -->
+        <section class="section-padding">
+            <div class="container fade-up">
+                <div class="section-title">
+                    <h2>Explora Más de Ekalmad</h2>
+                    <p>Accede rápidamente a información de tu interés en nuestros apartados especiales.</p>
                 </div>
 
                 <div
                     style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px;">
                     <a href="/marcas"
-                        style="background: white; padding: 40px 30px; border-radius: var(--border-radius); box-shadow: var(--shadow-md); text-align: center; display: block; transition: var(--transition);">
+                        style="background: var(--bg-light); padding: 40px 30px; border-radius: var(--border-radius); box-shadow: var(--shadow-sm); text-align: center; display: block; transition: var(--transition);">
                         <svg width="40" height="40" style="color: var(--primary); margin-bottom: 20px;"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
                         </svg>
-                        <h3 style="color: var(--text-main); font-size: 1.5rem; margin-bottom: 15px;">Nuestras Marcas
-                        </h3>
-                        <p style="color: var(--text-light); font-size: 1rem;">Conoce el mundo de Yuraq y Kali, creadas
-                            para cada estilo de vida.</p>
+                        <h3 style="color: var(--text-main); font-size: 1.3rem; margin-bottom: 15px;">Comparar Nuestras
+                            Marcas</h3>
+                        <p style="color: var(--text-light); font-size: 0.95rem; line-height: 1.6;">Mira el contraste
+                            entre el mundo de Yuraq y la experiencia de la línea Kali.</p>
                     </a>
                     <a href="/beneficios"
-                        style="background: white; padding: 40px 30px; border-radius: var(--border-radius); box-shadow: var(--shadow-md); text-align: center; display: block; transition: var(--transition);">
+                        style="background: var(--bg-light); padding: 40px 30px; border-radius: var(--border-radius); box-shadow: var(--shadow-sm); text-align: center; display: block; transition: var(--transition);">
                         <svg width="40" height="40" style="color: var(--primary); margin-bottom: 20px;"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
                         </svg>
-                        <h3 style="color: var(--text-main); font-size: 1.5rem; margin-bottom: 15px;">Beneficios</h3>
-                        <p style="color: var(--text-light); font-size: 1rem;">Conoce los 6 beneficios de hidratarte con
-                            agua de la más alta pureza.</p>
+                        <h3 style="color: var(--text-main); font-size: 1.3rem; margin-bottom: 15px;">Salud y Beneficios
+                        </h3>
+                        <p style="color: var(--text-light); font-size: 0.95rem; line-height: 1.6;">Conoce los 6
+                            beneficios clínicos de hidratarte con agua de la más alta pureza.</p>
                     </a>
                     <a href="/cobertura"
-                        style="background: white; padding: 40px 30px; border-radius: var(--border-radius); box-shadow: var(--shadow-md); text-align: center; display: block; transition: var(--transition);">
+                        style="background: var(--bg-light); padding: 40px 30px; border-radius: var(--border-radius); box-shadow: var(--shadow-sm); text-align: center; display: block; transition: var(--transition);">
                         <svg width="40" height="40" style="color: var(--primary); margin-bottom: 20px;"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                             <circle cx="12" cy="10" r="3"></circle>
                         </svg>
-                        <h3 style="color: var(--text-main); font-size: 1.5rem; margin-bottom: 15px;">Nuestra Cobertura
+                        <h3 style="color: var(--text-main); font-size: 1.3rem; margin-bottom: 15px;">Zonas de Cobertura
                         </h3>
-                        <p style="color: var(--text-light); font-size: 1rem;">Llegamos a donde te encuentres en la
-                            región sur y vendemos al por mayor.</p>
+                        <p style="color: var(--text-light); font-size: 0.95rem; line-height: 1.6;">Llegamos a todo el
+                            Cusco. Descubre cómo solicitar despachos corporativos.</p>
                     </a>
                 </div>
             </div>
@@ -106,8 +322,8 @@
     <section class="cta-section">
         <div class="container fade-up">
             <h2>¿Listo para Hidratarte con lo Mejor de los Andes?</h2>
-            <p style="font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9;">Haz tu pedido hoy mismo. Elige la calidades
-                Ekalmad.</p>
+            <p style="font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9;">Haz tu pedido hoy mismo. Elige la calidad
+                garantizada de Ekalmad.</p>
             <a href="https://wa.me/51906644944" target="_blank" class="btn btn-whatsapp"
                 style="font-size: 1.1rem; padding: 15px 30px;">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
