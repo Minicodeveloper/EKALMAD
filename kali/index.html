@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kali - Línea Premium | Ekalmad</title>
+    <meta name="description"
+        content="Agua Kali de Ekalmad. La línea premium para personas exigentes. Conoce nuestra novedosa lata de aluminio.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,600&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <style>
+        /* Specific Styles for Kali Page */
+        .kali-hero {
+            height: 80vh;
+            background: linear-gradient(rgba(14, 116, 144, 0.8), rgba(30, 58, 95, 0.9)), url('/images/hero-mountains.png') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding-top: 80px;
+        }
+
+        .kali-philosophy {
+            padding: 100px 0;
+            background-color: var(--bg-white);
+        }
+
+        .kali-philosophy-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .kali-card {
+            background: var(--kali-bg);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            border-left: 6px solid var(--kali-blue);
+        }
+
+        .kali-card h3 {
+            color: var(--kali-blue);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .feature-item svg {
+            color: var(--kali-teal);
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 992px) {
+            .kali-philosophy-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <app-navbar></app-navbar>
+
+    <!-- Hero -->
+    <section class="kali-hero">
+        <div class="container">
+            <h1 class="fade-up">Agua de Mesa Kali</h1>
+            <p class="fade-up" style="font-size: 1.5rem; margin-top: 20px;">Línea Premium</p>
+            <p class="fade-up" style="max-width: 700px; margin: 20px auto; font-size: 1.1rem; opacity: 0.9;">
+                Diseño elegante, pureza inigualable y un compromiso firme con la sostenibilidad. Kali no es solo agua,
+                es un estilo de vida que respeta el entorno.
+            </p>
+            <div class="fade-up" style="margin-top: 30px;">
+                <a href="#productos" class="btn btn-primary" style="background: var(--kali-blue);">Ver Catálogo Kali</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filosofia Kali -->
+    <section class="kali-philosophy">
+        <div class="container fade-up">
+            <div class="section-title">
+                <span style="color: var(--kali-teal); font-weight: 600; text-transform: uppercase;">La Filosofía
+                    Kali</span>
+                <h2>Más que Hidratación, Una Experiencia</h2>
+                <p>Nuestra línea más sofisticada está diseñada para los consumidores exigentes que no comprometen el
+                    estilo ni la calidad.</p>
+            </div>
+
+            <div class="kali-philosophy-grid">
+                <div>
+                    <h3
+                        style="font-family: var(--font-head); font-size: 2.2rem; margin-bottom: 20px; color: var(--text-main);">
+                        Perfecta para Ocasiones Especiales y Restaurantes</h3>
+                    <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-light); margin-bottom: 20px;">
+                        Kali ha sido formulada y diseñada no solo por su contenido purificado, sino por su presencia
+                        estética. Sus botellas estilizadas y nuestra exclusiva lata de aluminio encajan perfectamente en
+                        hoteles boutique, eventos corporativos, y mesas de alta cocina.
+                    </p>
+                    <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-light);">
+                        Su pH perfectamente balanceado y filtración extrema aseguran un perfil de sabor neutro y
+                        cristalino, ideal para maridar con vinos y comidas de autor sin alterar los sabores.
+                    </p>
+                </div>
+                <div class="kali-card">
+                    <h3>¿Por qué elegir Kali?</h3>
+                    <div class="feature-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+                            </path>
+                        </svg>
+                        <div>
+                            <h4 style="font-size: 1.1rem; margin-bottom: 5px;">Diseño Vanguardista</h4>
+                            <p style="font-size: 0.95rem; color: var(--text-light);">Cada envase comunica elegancia y
+                                cuidado por el detalle.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path
+                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                            </path>
+                            <path d="M2 12h20"></path>
+                        </svg>
+                        <div>
+                            <h4 style="font-size: 1.1rem; margin-bottom: 5px;">Sostenibilidad</h4>
+                            <p style="font-size: 0.95rem; color: var(--text-light);">Impulsamos el uso de aluminio
+                                reciclable y envases optimizados para reducir la huella de carbono.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        <div>
+                            <h4 style="font-size: 1.1rem; margin-bottom: 5px;">Exclusividad Personal</h4>
+                            <p style="font-size: 0.95rem; color: var(--text-light);">El compañero ideal para personas
+                                que buscan destacarse en cada detalle de su vida profesional.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Productos Kali -->
+    <section class="section-padding" id="productos">
+        <div class="container fade-up">
+            <div class="section-title">
+                <h2>Colección Completa Kali</h2>
+                <p>Nuestra prestigiosa línea en todas sus presentaciones, perfectas para restaurantes, oficinas
+                    ejecutivas y hogares que valoran el estilo.</p>
+            </div>
+
+            <div class="products-grid">
+                <!-- Kali 1 -->
+                <div class="product-card">
+                    <div class="product-badge" style="background: var(--kali-blue);">20 Litros</div>
+                    <div class="product-img-wrapper">
+                        <img src="/images/kali_20lt_caja.png" alt="Kali Caja 20L"
+                            onerror="this.onerror=null; this.outerHTML='<div class=\'img-placeholder\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\' ry=\'2\'></rect><circle cx=\'8.5\' cy=\'8.5\' r=\'1.5\'></circle><polyline points=\'21 15 16 10 5 21\'></polyline></svg><span>Kali Caja 20L<br>Imagen próximamente</span></div>'">
+                    </div>
+                    <h3 class="product-title">Caja Exclusiva</h3>
+                    <p class="product-desc">El sabor premium para tu hogar u oficina con un diseño distintivo de cartón
+                        reciclado.</p>
+                    <a href="https://wa.me/51906644944?text=Hola,%20deseo%20pedir%20Caja%20Kali" target="_blank"
+                        class="btn btn-outline"
+                        style="border-color: var(--kali-blue); color: var(--kali-blue); margin-top: 15px; width: 100%; font-size: 0.9rem;">Comprar</a>
+                </div>
+
+                <!-- Kali 2 -->
+                <div class="product-card">
+                    <div class="product-badge" style="background: var(--kali-blue);">20 Litros</div>
+                    <div class="product-img-wrapper">
+                        <img src="/images/kali_20lt_con_caño.png" alt="Kali Bidón 20L"
+                            onerror="this.onerror=null; this.outerHTML='<div class=\'img-placeholder\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\' ry=\'2\'></rect><circle cx=\'8.5\' cy=\'8.5\' r=\'1.5\'></circle><polyline points=\'21 15 16 10 5 21\'></polyline></svg><span>Kali Bidón PET 20L<br>Imagen próximamente</span></div>'">
+                    </div>
+                    <h3 class="product-title">Bidón PET con Caño</h3>
+                    <p class="product-desc">Funcionalidad clásica envuelta en la elegancia de Kali. Ideal para
+                        dispensadores frío/calor.</p>
+                    <a href="https://wa.me/51906644944?text=Hola,%20deseo%20pedir%20Bidón%20Kali" target="_blank"
+                        class="btn btn-outline"
+                        style="border-color: var(--kali-blue); color: var(--kali-blue); margin-top: 15px; width: 100%; font-size: 0.9rem;">Comprar</a>
+                </div>
+
+                <!-- Kali 3 -->
+                <div class="product-card">
+                    <div class="product-badge" style="background: var(--kali-blue);">7 Litros</div>
+                    <div class="product-img-wrapper">
+                        <img src="/images/kali_7lt.png" alt="Kali 7L"
+                            onerror="this.onerror=null; this.outerHTML='<div class=\'img-placeholder\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\' ry=\'2\'></rect><circle cx=\'8.5\' cy=\'8.5\' r=\'1.5\'></circle><polyline points=\'21 15 16 10 5 21\'></polyline></svg><span>Kali 7L<br>Imagen próximamente</span></div>'">
+                    </div>
+                    <h3 class="product-title">Botella Familiar</h3>
+                    <p class="product-desc">Comparte la frescura premium con los tuyos en cualquier momento y evento
+                        especial.</p>
+                    <a href="https://wa.me/51906644944?text=Hola,%20deseo%20pedir%20Kali%207L" target="_blank"
+                        class="btn btn-outline"
+                        style="border-color: var(--kali-blue); color: var(--kali-blue); margin-top: 15px; width: 100%; font-size: 0.9rem;">Comprar</a>
+                </div>
+
+                <!-- Kali 4 -->
+                <div class="product-card">
+                    <div class="product-badge" style="background: var(--kali-blue);">3 Litros</div>
+                    <div class="product-img-wrapper">
+                        <img src="/images/kali_3lt.png" alt="Kali 3L"
+                            onerror="this.onerror=null; this.outerHTML='<div class=\'img-placeholder\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\' ry=\'2\'></rect><circle cx=\'8.5\' cy=\'8.5\' r=\'1.5\'></circle><polyline points=\'21 15 16 10 5 21\'></polyline></svg><span>Kali 3L<br>Imagen próximamente</span></div>'">
+                    </div>
+                    <h3 class="product-title">Botella Extended</h3>
+                    <p class="product-desc">Ideal para viajes cortos, una jornada completa de trabajo o largas sesiones
+                        de estudio.</p>
+                    <a href="https://wa.me/51906644944?text=Hola,%20deseo%20pedir%20Kali%203L" target="_blank"
+                        class="btn btn-outline"
+                        style="border-color: var(--kali-blue); color: var(--kali-blue); margin-top: 15px; width: 100%; font-size: 0.9rem;">Comprar</a>
+                </div>
+
+                <!-- Kali 5 -->
+                <div class="product-card">
+                    <div class="product-badge" style="background: var(--kali-blue);">2.5 Litros</div>
+                    <div class="product-img-wrapper">
+                        <img src="/images/kali_2-5lt.png" alt="Kali 2.5L"
+                            onerror="this.onerror=null; this.outerHTML='<div class=\'img-placeholder\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\' ry=\'2\'></rect><circle cx=\'8.5\' cy=\'8.5\' r=\'1.5\'></circle><polyline points=\'21 15 16 10 5 21\'></polyline></svg><span>Kali 2.5L<br>Imagen próximamente</span></div>'">
+                    </div>
+                    <h3 class="product-title">Botella Mediana</h3>
+                    <p class="product-desc">Estilizada y práctica, te acompaña sin ser una carga. Silueta única en el
+                        mercado.</p>
+                    <a href="https://wa.me/51906644944?text=Hola,%20deseo%20pedir%20Kali%202.5L" target="_blank"
+                        class="btn btn-outline"
+                        style="border-color: var(--kali-blue); color: var(--kali-blue); margin-top: 15px; width: 100%; font-size: 0.9rem;">Comprar</a>
+                </div>
+
+                <!-- Kali 6 -->
+                <div class="product-card">
+                    <div class="product-badge" style="background: var(--kali-blue);">1 Litro</div>
+                    <div class="product-img-wrapper">
+                        <img src="/images/kali_1lt.png" alt="Kali 1L"
+                            onerror="this.onerror=null; this.outerHTML='<div class=\'img-placeholder\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\' ry=\'2\'></rect><circle cx=\'8.5\' cy=\'8.5\' r=\'1.5\'></circle><polyline points=\'21 15 16 10 5 21\'></polyline></svg><span>Kali 1L Sport<br>Imagen próximamente</span></div>'">
+                    </div>
+                    <h3 class="product-title">Botella Sport Cap</h3>
+                    <p class="product-desc">El estilo de vida activo y saludable merece una presentación sofisticada.
+                    </p>
+                    <a href="https://wa.me/51906644944?text=Hola,%20deseo%20pedir%20Kali%201L%20Sport" target="_blank"
+                        class="btn btn-outline"
+                        style="border-color: var(--kali-blue); color: var(--kali-blue); margin-top: 15px; width: 100%; font-size: 0.9rem;">Comprar</a>
+                </div>
+
+                <!-- Kali 7 -->
+                <div class="product-card">
+                    <div class="product-badge" style="background: var(--kali-blue);">650 ML</div>
+                    <div class="product-img-wrapper">
+                        <img src="/images/kali_650ml.png" alt="Kali 650ml"
+                            onerror="this.onerror=null; this.outerHTML='<div class=\'img-placeholder\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\' ry=\'2\'></rect><circle cx=\'8.5\' cy=\'8.5\' r=\'1.5\'></circle><polyline points=\'21 15 16 10 5 21\'></polyline></svg><span>Kali 650ML<br>Imagen próximamente</span></div>'">
+                    </div>
+                    <h3 class="product-title">Botella Personal</h3>
+                    <p class="product-desc">El toque perfecto para el bolso de mano. Lleva la elegancia en cada trago.
+                    </p>
+                    <a href="https://wa.me/51906644944?text=Hola,%20deseo%20pedir%20Kali%20650ml" target="_blank"
+                        class="btn btn-outline"
+                        style="border-color: var(--kali-blue); color: var(--kali-blue); margin-top: 15px; width: 100%; font-size: 0.9rem;">Comprar</a>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <app-footer></app-footer>
+
+    <!-- Scripts -->
+    <script src="/js/main.js"></script>
+    <script src="/js/components.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ekalmad - La Pureza de los Andes en Cada Gota</title>
+    <meta name="description"
+        content="Ekalmad EIRL - Agua purificada producida en los Andes del Cusco. Conoce nuestras marcas Yuraq y Kali.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,600&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        /* Additional styles specific for index links */
+        .brand-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .brand-card-link-btn {
+            margin-top: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <app-navbar></app-navbar>
+
+    <section class="hero" style="height: 50vh; min-height: 400px; padding-top: 100px;">
+        <div class="hero-content">
+            <h1 class="fade-up">Nuestras Marcas</h1>
+            <p class="fade-up" style="animation-delay: 0.3s; max-width: 700px; margin: 20px auto; font-size: 1.2rem; opacity: 0.9;">
+                Conoce Yuraq y Kali, dos identidades creadas para brindarte hidratación de máxima pureza.
+            </p>
+        </div>
+    </section>
+    <main style="padding-bottom: 60px;">
+<section class="section-padding" id="marcas">
+            <div class="container fade-up">
+                <div class="section-title">
+                    <h2>Nuestras Marcas</h2>
+                    <p>Dos opciones excepcionales, una misma promesa de pureza y calidad. Descubre qué línea se adapta
+                        mejor a tu estilo de vida.</p>
+                </div>
+
+                <div class="brands-grid">
+                    <div class="brand-card yuraq">
+                        <div>
+                            <div class="brand-icon">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                                </svg>
+                            </div>
+                            <h3>Agua de Mesa Yuraq</h3>
+                            <p style="color: var(--yuraq); font-weight: 500; margin: 10px 0;">"Es Energía"</p>
+                            <p class="product-desc">Agua purificada clásica, producida en los Andes. Refrescante, vital
+                                y perfecta para la hidratación diaria familiar y deportiva.</p>
+                        </div>
+                        <a href="/yuraq" class="btn btn-outline brand-card-link-btn"
+                            style="border-color: var(--yuraq); color: var(--yuraq);">Visitar el mundo Yuraq</a>
+                    </div>
+
+                    <div class="brand-card kali">
+                        <div>
+                            <div class="brand-icon">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                                </svg>
+                            </div>
+                            <h3>Agua de Mesa Kali</h3>
+                            <p style="color: var(--kali-blue); font-weight: 500; margin: 10px 0;">"Línea Premium"</p>
+                            <p class="product-desc">Nuestra marca premium y moderna, con presentaciones exclusivas
+                                orientadas hacia el estilo, la sofisticación y la sostenibilidad medioambiental.</p>
+                        </div>
+                        <a href="/kali" class="btn btn-outline brand-card-link-btn"
+                            style="border-color: var(--kali-blue); color: var(--kali-blue);">Visitar la experiencia
+                            Kali</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+</main>
+<app-footer></app-footer>
+
+    <!-- Scripts -->
+    <script src="/js/main.js"></script>
+    <script src="/js/components.js"></script>
+</body>
+
+</html>

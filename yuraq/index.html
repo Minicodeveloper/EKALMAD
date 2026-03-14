@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuraq - Es Energía | Ekalmad</title>
+    <meta name="description"
+        content="Agua Yuraq de Ekalmad. Energía pura desde los Andes. Conoce nuestros bidones, cajas, y botellas deportivas.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,600&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <style>
+        /* Specific Styles for Yuraq Page */
+        .yuraq-hero {
+            height: 80vh;
+            background: linear-gradient(rgba(14, 116, 144, 0.7), rgba(5, 150, 105, 0.8)), url('/images/hero-mountains.png') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding-top: 80px;
+        }
+
+        .process-section {
+            background: white;
+            padding: 80px 0;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .step-card {
+            text-align: center;
+            padding: 30px;
+            background: var(--bg-light);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .step-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .step-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--yuraq);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .step-card h3 {
+            color: var(--yuraq);
+            margin-bottom: 15px;
+        }
+
+        .yuraq-benefits {
+            padding: 80px 0;
+            background-color: var(--yuraq-bg);
+        }
+
+        .yuraq-benefits .section-title h2 {
+            color: var(--yuraq);
+        }
+
+        .benefit-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .benefit-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <app-navbar></app-navbar>
+
+    <!-- Hero -->
+    <section class="yuraq-hero">
+        <div class="container">
+            <h1 class="fade-up">Agua de Mesa Yuraq</h1>
+            <p class="fade-up" style="font-size: 1.5rem; margin-top: 20px;">"Es Energía"</p>
+            <p class="fade-up" style="max-width: 700px; margin: 20px auto; font-size: 1.1rem; opacity: 0.9;">
+                Nacida de las fuentes más puras de los Andes cusqueños. Nuestra línea clásica diseñada para acompañarte
+                en tu día a día, brindándote la hidratación y energía que necesitas para superar cualquier desafío.
+            </p>
+            <div class="fade-up" style="margin-top: 30px;">
+                <a href="#productos" class="btn btn-primary" style="background: var(--yuraq);">Ver Productos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- La Esencia Yuraq -->
+    <section class="yuraq-benefits">
+        <div class="container fade-up">
+            <div class="section-title">
+                <span>¿Por qué elegir Yuraq?</span>
+                <h2>La Esencia de la Montaña</h2>
+                <p>Yuraq significa "blanco" en quechua, símbolo de pureza y claridad. Hemos diseñado esta agua para ser
+                    tu compañera confiable.</p>
+            </div>
+            <div class="benefit-content">
+                <div>
+                    <h3 style="color: var(--yuraq); font-size: 1.8rem; margin-bottom: 20px;">Energía 100% Natural</h3>
+                    <p style="margin-bottom: 15px; font-size: 1.1rem; line-height: 1.8;">
+                        La deshidratación leve es la principal causa de la fatiga diurna. Agua Yuraq cuenta con un
+                        proceso de filtración avanzado que mantiene el equilibrio hídrico de tu cuerpo sin aportar
+                        pesadez.
+                    </p>
+                    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 20px;">
+                        Recomendada para deportistas, trabajadores, y familias enteras que necesitan un impulso de
+                        frescura y vitalidad a lo largo del día.
+                    </p>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 15px;">
+                        <li style="display: flex; align-items: center; gap: 10px;">
+                            <svg style="color: var(--yuraq);" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Absorción rápida en el organismo
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 10px;">
+                            <svg style="color: var(--yuraq);" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Sabor ligero y refrescante
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 10px;">
+                            <svg style="color: var(--yuraq);" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Bajo contenido de sodio
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <div
+                        style="background: white; border-radius: var(--border-radius); box-shadow: var(--shadow-xl); padding: 40px; border-left: 6px solid var(--yuraq);">
+                        <h4 style="font-size: 1.5rem; color: var(--primary-dark); margin-bottom: 15px;">Nuestra Promesa
+                        </h4>
+                        <p style="font-size: 1.1rem; font-style: italic; color: var(--text-light);">
+                            "Proveer una hidratación segura y constante a cada familia peruana, apoyados en la
+                            tecnología y el respeto por nuestro origen andino."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proceso de Purificación -->
+    <section class="process-section">
+        <div class="container fade-up">
+            <div class="section-title">
+                <h2>Nuestro Proceso de Calidad</h2>
+                <p>Nos aseguramos de que cada gota de Agua Yuraq alcance el nivel máximo de pureza.</p>
+            </div>
+
+            <div class="process-steps">
+                <div class="step-card">
+                    <div class="step-icon">1</div>
+                    <h3>Microfiltración</h3>
+                    <p>Filtros de sedimento ultrafinos que eliminan cualquier partícula suspendida en el agua de origen.
+                    </p>
+                </div>
+                <div class="step-card">
+                    <div class="step-icon">2</div>
+                    <h3>Carbón Activado</h3>
+                    <p>Garantiza la eliminación de olores, colores o sabores artificiales, dejando el agua 100% natural.
+                    </p>
+                </div>
+                <div class="step-card">
+                    <div class="step-icon">3</div>
+                    <h3>Ósmosis Inversa</h3>
+                    <p>Tecnología a nivel molecular que retiene metales pesados y sales excesivas, brindando agua
+                        liviana.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-icon">4</div>
+                    <h3>Ozonización y UV</h3>
+                    <p>Doble etapa de esterilización para asegurar un producto libre de cualquier microorganismo y
+                        bacterias.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Productos Yuraq -->
+    <section class="section-padding bg-light" id="productos" style="background-color: #f8fafc;">
+        <div class="container fade-up">
+            <div class="section-title">
+                <h2>Catálogo de Productos Yuraq</h2>
+                <p>Presentaciones para cada necesidad, desde consumo personal hasta tamaños familiares y corporativos.
+                </p>
+            </div>
+
+            <div class="products-grid">
+                <!-- Yuraq 1 -->
+                <div class="product-card">
+                    <div class="product-badge" style="background: var(--yuraq);">20 Litros</div>
+                    <div class="product-img-wrapper">
+                        <img src="/images/yuraq_20lt_caja.png" alt="Yuraq Caja 20L"
+                            onerror="this.onerror=null; this.outerHTML='<div class=\'img-placeholder\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\' ry=\'2\'></rect><circle cx=\'8.5\' cy=\'8.5\' r=\'1.5\'></circle><polyline points=\'21 15 16 10 5 21\'></polyline></svg><span>Yuraq Caja 20L<br>Imagen próximamente</span></div>'">
+                    </div>
+                    <h3 class="product-title">Caja Bag-in-Box</h3>
+                    <p class="product-desc">Ideal para el hogar. Dispensador práctico y ecológico. Fácil almacenaje en
+                        cualquier despensa.</p>
+                    <a href="https://wa.me/51906644944?text=Hola,%20deseo%20pedir%20Caja%20Bag-in-Box%20Yuraq%2020L"
+                        target="_blank" class="btn btn-outline"
+                        style="border-color: var(--yuraq); color: var(--yuraq); margin-top: 15px; width: 100%; font-size: 0.9rem;">Pedir
+                        por WhatsApp</a>
+                </div>
+
+                <!-- Yuraq 2 -->
+                <div class="product-card">
+                    <div class="product-badge" style="background: var(--yuraq);">20 Litros</div>
+                    <div class="product-img-wrapper">
+                        <img src="/images/yuraq_20lt_con_caño.png" alt="Yuraq Bidón 20L"
+                            onerror="this.onerror=null; this.outerHTML='<div class=\'img-placeholder\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\' ry=\'2\'></rect><circle cx=\'8.5\' cy=\'8.5\' r=\'1.5\'></circle><polyline points=\'21 15 16 10 5 21\'></polyline></svg><span>Yuraq Bidón PET 20L<br>Imagen próximamente</span></div>'">
+                    </div>
+                    <h3 class="product-title">Bidón PET con Caño</h3>
+                    <p class="product-desc">Clásico bidón resistente, listo para servir fácil y rápido. Perfecto para
+                        los dispensadores de agua.</p>
+                    <a href="https://wa.me/51906644944?text=Hola,%20deseo%20pedir%20Bidón%20PET%20Yuraq%2020L"
+                        target="_blank" class="btn btn-outline"
+                        style="border-color: var(--yuraq); color: var(--yuraq); margin-top: 15px; width: 100%; font-size: 0.9rem;">Pedir
+                        por WhatsApp</a>
+                </div>
+
+                <!-- Yuraq 3 -->
+                <div class="product-card">
+                    <div class="product-badge" style="background: var(--yuraq);">7 Litros</div>
+                    <div class="product-img-wrapper">
+                        <img src="/images/yuraq_7lt.png" alt="Yuraq 7L"
+                            onerror="this.onerror=null; this.outerHTML='<div class=\'img-placeholder\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\' ry=\'2\'></rect><circle cx=\'8.5\' cy=\'8.5\' r=\'1.5\'></circle><polyline points=\'21 15 16 10 5 21\'></polyline></svg><span>Yuraq 7L<br>Imagen próximamente</span></div>'">
+                    </div>
+                    <h3 class="product-title">Botella Familiar con Asa</h3>
+                    <p class="product-desc">Formato familiar intermedio, perfecto para viajes o reuniones de fin de
+                        semana con la familia.</p>
+                    <a href="https://wa.me/51906644944?text=Hola,%20deseo%20pedir%20Yuraq%207L" target="_blank"
+                        class="btn btn-outline"
+                        style="border-color: var(--yuraq); color: var(--yuraq); margin-top: 15px; width: 100%; font-size: 0.9rem;">Pedir
+                        por WhatsApp</a>
+                </div>
+
+                <!-- Yuraq 4 -->
+                <div class="product-card">
+                    <div class="product-badge" style="background: var(--yuraq);">3 Litros</div>
+                    <div class="product-img-wrapper">
+                        <img src="/images/yuraq_3lt.png" alt="Yuraq 3L"
+                            onerror="this.onerror=null; this.outerHTML='<div class=\'img-placeholder\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\' ry=\'2\'></rect><circle cx=\'8.5\' cy=\'8.5\' r=\'1.5\'></circle><polyline points=\'21 15 16 10 5 21\'></polyline></svg><span>Yuraq 3L<br>Imagen próximamente</span></div>'">
+                    </div>
+                    <h3 class="product-title">Botella Personal Grande</h3>
+                    <p class="product-desc">Hidratación prolongada. Muy solicitada para rutas largas de trekking por el
+                        Cusco y alrededores.</p>
+                    <a href="https://wa.me/51906644944?text=Hola,%20deseo%20pedir%20Yuraq%203L" target="_blank"
+                        class="btn btn-outline"
+                        style="border-color: var(--yuraq); color: var(--yuraq); margin-top: 15px; width: 100%; font-size: 0.9rem;">Pedir
+                        por WhatsApp</a>
+                </div>
+
+                <!-- Yuraq 5 -->
+                <div class="product-card">
+                    <div class="product-badge" style="background: var(--yuraq);">2.5 Litros</div>
+                    <div class="product-img-wrapper">
+                        <img src="/images/yuraq_2-5lt.png" alt="Yuraq 2.5L"
+                            onerror="this.onerror=null; this.outerHTML='<div class=\'img-placeholder\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\' ry=\'2\'></rect><circle cx=\'8.5\' cy=\'8.5\' r=\'1.5\'></circle><polyline points=\'21 15 16 10 5 21\'></polyline></svg><span>Yuraq 2.5L<br>Imagen próximamente</span></div>'">
+                    </div>
+                    <h3 class="product-title">Botella Mediana</h3>
+                    <p class="product-desc">El equilibrio ideal entre volumen y portabilidad. Cumple tu meta diaria de
+                        hidratación con una botella.</p>
+                    <a href="https://wa.me/51906644944?text=Hola,%20deseo%20pedir%20Yuraq%202.5L" target="_blank"
+                        class="btn btn-outline"
+                        style="border-color: var(--yuraq); color: var(--yuraq); margin-top: 15px; width: 100%; font-size: 0.9rem;">Pedir
+                        por WhatsApp</a>
+                </div>
+
+                <!-- Yuraq 6 -->
+                <div class="product-card">
+                    <div class="product-badge" style="background: var(--yuraq);">1 Litro</div>
+                    <div class="product-img-wrapper">
+                        <img src="/images/yuraq_1lt.png" alt="Yuraq 1L"
+                            onerror="this.onerror=null; this.outerHTML='<div class=\'img-placeholder\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\' ry=\'2\'></rect><circle cx=\'8.5\' cy=\'8.5\' r=\'1.5\'></circle><polyline points=\'21 15 16 10 5 21\'></polyline></svg><span>Yuraq 1L Sport<br>Imagen próximamente</span></div>'">
+                    </div>
+                    <h3 class="product-title">Botella Sport Cap</h3>
+                    <p class="product-desc">Con tapa chupón, perfecta para deportistas, gimnasio o paseos en bicicleta.
+                    </p>
+                    <a href="https://wa.me/51906644944?text=Hola,%20deseo%20pedir%20Yuraq%201L%20Sport" target="_blank"
+                        class="btn btn-outline"
+                        style="border-color: var(--yuraq); color: var(--yuraq); margin-top: 15px; width: 100%; font-size: 0.9rem;">Pedir
+                        por WhatsApp</a>
+                </div>
+
+                <!-- Yuraq 7 -->
+                <div class="product-card">
+                    <div class="product-badge" style="background: var(--yuraq);">650 ML</div>
+                    <div class="product-img-wrapper">
+                        <img src="/images/yuraq_650ml.png" alt="Yuraq 650ml"
+                            onerror="this.onerror=null; this.outerHTML='<div class=\'img-placeholder\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\' ry=\'2\'></rect><circle cx=\'8.5\' cy=\'8.5\' r=\'1.5\'></circle><polyline points=\'21 15 16 10 5 21\'></polyline></svg><span>Yuraq 650ML<br>Imagen próximamente</span></div>'">
+                    </div>
+                    <h3 class="product-title">Botella Personal</h3>
+                    <p class="product-desc">Llévala contigo a todos lados. Tu compañera ideal en la oficina, colegio o
+                        universidad.</p>
+                    <a href="https://wa.me/51906644944?text=Hola,%20deseo%20pedir%20Yuraq%20650ML" target="_blank"
+                        class="btn btn-outline"
+                        style="border-color: var(--yuraq); color: var(--yuraq); margin-top: 15px; width: 100%; font-size: 0.9rem;">Pedir
+                        por WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <app-footer></app-footer>
+
+    <!-- Scripts -->
+    <script src="/js/main.js"></script>
+    <script src="/js/components.js"></script>
+</body>
+
+</html>
