@@ -40,7 +40,6 @@ const footerHtml = `    <footer class="footer">
                     <div class="footer-links">
                         <a href="/beneficios">Beneficios</a>
                         <a href="/cobertura">Cobertura Local</a>
-                        <a href="#">Trabaja con Nosotros</a>
                     </div>
                 </div>
                 <div>
