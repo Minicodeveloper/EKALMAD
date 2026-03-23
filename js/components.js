@@ -1,6 +1,8 @@
 const navbarHtml = `    <nav class="navbar" id="navbar">
         <div class="container">
-            <a href="/" class="logo">EKALMAD</a>
+            <a href="/" class="logo" style="display: flex; align-items: center; text-decoration: none;">
+                <img src="/images/Logo_Ekalmad.jpeg" alt="Ekalmad Logo" style="height: 48px; width: auto; object-fit: contain; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+            </a>
             <div class="nav-links" id="nav-links">
                 <a href="/">Inicio</a>
                 <a href="/marcas">Marcas</a>
