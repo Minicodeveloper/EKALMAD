@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ekalmad App - Descarga Nuestra Aplicación Móvil</title>
+    <meta name="description"
+        content="Descarga la app móvil de Ekalmad desde Google Play Store. Pide agua purificada Yuraq y Kali directo desde tu celular.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,600&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        /* ===== App Page Specific Styles ===== */
+
+        /* Phone Mockup */
+        .phone-mockup {
+            width: 280px;
+            height: 560px;
+            background: linear-gradient(145deg, #1a1a2e, #16213e);
+            border-radius: 40px;
+            padding: 12px;
+            box-shadow:
+                0 30px 60px rgba(0, 0, 0, 0.4),
+                0 0 40px rgba(14, 116, 144, 0.15),
+                inset 0 0 0 2px rgba(255, 255, 255, 0.1);
+            position: relative;
+            margin: 0 auto;
+            animation: floatPhone 6s ease-in-out infinite;
+        }
+
+        .phone-mockup::before {
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 25px;
+            background: #0d0d1a;
+            border-radius: 20px;
+            z-index: 10;
+        }
+
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, var(--primary), var(--secondary), #059669);
+            border-radius: 30px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .phone-screen-content {
+            text-align: center;
+            color: white;
+            padding: 20px;
+            z-index: 2;
+        }
+
+        .phone-screen-content img {
+            width: 80px;
+            height: 80px;
+            border-radius: 18px;
+            margin: 0 auto 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            object-fit: cover;
+        }
+
+        .phone-screen-content h3 {
+            color: white;
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+        }
+
+        .phone-screen-content p {
+            font-size: 0.8rem;
+            opacity: 0.85;
+            margin-bottom: 15px;
+        }
+
+        .phone-screen-btn {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .phone-screen::after {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 70%, rgba(255, 255, 255, 0.05) 0%, transparent 60%);
+            opacity: 0.8;
+        }
+
+        @keyframes floatPhone {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        /* Hero App Layout */
+        .hero-app-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero-app-text {
+            text-align: left;
+        }
+
+        .hero-app-text h1 {
+            font-size: 3.2rem;
+            color: white;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            animation: slideDown 1s ease-out;
+        }
+
+        .hero-app-text p {
+            font-size: 1.15rem;
+            opacity: 0.9;
+            margin-bottom: 35px;
+            line-height: 1.7;
+            animation: fadeIn 1s ease-out 0.5s both;
+        }
+
+        .hero-app-text .hero-buttons {
+            justify-content: flex-start;
+        }
+
+        /* Play Store Badge */
+        .play-store-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: #000;
+            color: white;
+            padding: 10px 24px;
+            border-radius: 12px;
+            font-family: var(--font-body);
+            transition: var(--transition);
+            box-shadow: var(--shadow-md);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .play-store-badge:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+            background: #1a1a1a;
+        }
+
+        .play-store-badge svg {
+            width: 32px;
+            height: 32px;
+            flex-shrink: 0;
+        }
+
+        .play-store-badge .badge-text {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        .play-store-badge .badge-text small {
+            font-size: 0.7rem;
+            opacity: 0.8;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .play-store-badge .badge-text span {
+            font-size: 1.15rem;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        /* App Features Grid */
+        .app-features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .app-feature-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+            transition: var(--transition);
+            border-bottom: 3px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .app-feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .app-feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .app-feature-card:hover::before {
+            opacity: 1;
+        }
+
+        .app-feature-icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, rgba(14, 116, 144, 0.1), rgba(5, 150, 105, 0.1));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            transition: var(--transition);
+        }
+
+        .app-feature-card:hover .app-feature-icon {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .app-feature-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            color: var(--text-main);
+            font-family: var(--font-body);
+            font-weight: 600;
+        }
+
+        .app-feature-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        /* Steps Section */
+        .steps-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 50px;
+            position: relative;
+        }
+
+        .steps-container::before {
+            content: '';
+            position: absolute;
+            top: 45px;
+            left: 15%;
+            width: 70%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            opacity: 0.2;
+        }
+
+        .step-item {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 90px;
+            height: 90px;
+            margin: 0 auto 25px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2.2rem;
+            font-family: var(--font-head);
+            font-weight: 700;
+            box-shadow: 0 8px 25px rgba(14, 116, 144, 0.3);
+            position: relative;
+            z-index: 2;
+        }
+
+        .step-item h3 {
+            font-size: 1.25rem;
+            color: var(--text-main);
+            margin-bottom: 10px;
+            font-family: var(--font-body);
+            font-weight: 600;
+        }
+
+        .step-item p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            max-width: 280px;
+            margin: 0 auto;
+        }
+
+        /* Download CTA Banner */
+        .download-banner {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary), var(--secondary));
+            border-radius: var(--border-radius);
+            padding: 60px 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            box-shadow: var(--shadow-xl);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .download-banner::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .download-banner::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -5%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .download-banner-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+        }
+
+        .download-banner-content h2 {
+            color: white;
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+
+        .download-banner-content p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 25px;
+            max-width: 500px;
+        }
+
+        .download-banner-visual {
+            position: relative;
+            z-index: 2;
+            flex-shrink: 0;
+        }
+
+        .download-banner-visual .phone-mockup {
+            width: 200px;
+            height: 400px;
+            animation: none;
+        }
+
+        .download-banner-visual .phone-mockup::before {
+            width: 70px;
+            height: 18px;
+            top: 12px;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero-app-layout {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 40px;
+            }
+
+            .hero-app-text {
+                text-align: center;
+            }
+
+            .hero-app-text .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-app-text h1 {
+                font-size: 2.8rem;
+            }
+
+            .steps-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .steps-container::before {
+                display: none;
+            }
+
+            .download-banner {
+                flex-direction: column;
+                text-align: center;
+                padding: 40px 30px;
+            }
+
+            .download-banner-content p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-app-text h1 {
+                font-size: 2.2rem;
+            }
+
+            .phone-mockup {
+                width: 220px;
+                height: 440px;
+            }
+
+            .download-banner-visual .phone-mockup {
+                width: 180px;
+                height: 360px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <app-navbar></app-navbar>
+
+    <!-- Hero Section -->
+    <section class="hero" style="height: auto; min-height: 100vh; padding: 120px 0 80px;">
+        <div class="hero-app-layout">
+            <div class="hero-app-text">
+                <span class="fade-up"
+                    style="display: inline-block; background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); padding: 8px 20px; border-radius: 50px; font-size: 0.9rem; font-weight: 500; margin-bottom: 20px; border: 1px solid rgba(255,255,255,0.2);">
+                    📱 Disponible en Google Play
+                </span>
+                <h1 class="fade-up">Ekalmad en la palma de tu mano</h1>
+                <p class="fade-up" style="animation-delay: 0.3s;">
+                    Descarga nuestra aplicación móvil y pide agua purificada Yuraq y Kali directamente desde tu celular.
+                    Rápido, fácil y siempre a tu alcance.
+                </p>
+                <div class="hero-buttons fade-up" style="animation-delay: 0.6s;">
+                    <a href="https://play.google.com/store" target="_blank" class="play-store-badge"
+                        id="hero-download-btn">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 2.302a1 1 0 0 1 0 1.38l-2.302 2.302L15.396 12l2.302-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302L5.864 2.658z" />
+                        </svg>
+                        <div class="badge-text">
+                            <small>Disponible en</small>
+                            <span>Google Play</span>
+                        </div>
+                    </a>
+                    <a href="#como-funciona" class="btn btn-outline">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 16 16 12 12 8"></polyline>
+                            <line x1="8" y1="12" x2="16" y2="12"></line>
+                        </svg>
+                        Cómo Funciona
+                    </a>
+                </div>
+            </div>
+            <div class="fade-up" style="animation-delay: 0.4s;">
+                <div class="phone-mockup">
+                    <div class="phone-screen">
+                        <div class="phone-screen-content">
+                            <img src="/images/Logo_Ekalmad.jpeg" alt="Ekalmad App Icon">
+                            <h3>Ekalmad</h3>
+                            <p>Agua purificada<br>a un toque de distancia</p>
+                            <span class="phone-screen-btn">Pedir Ahora</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <!-- App Features Section -->
+        <section class="section-padding" id="funciones">
+            <div class="container">
+                <div class="section-title fade-up">
+                    <span
+                        style="color: var(--primary); font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Funciones</span>
+                    <h2>Todo lo que Necesitas en Una App</h2>
+                    <p style="max-width: 700px; margin: 0 auto; font-size: 1.1rem;">Hemos diseñado una experiencia móvil
+                        intuitiva para que pedir tu agua purificada sea más fácil que nunca.</p>
+                </div>
+
+                <div class="app-features-grid">
+                    <div class="app-feature-card fade-up">
+                        <div class="app-feature-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                        </div>
+                        <h3>Pedidos Rápidos</h3>
+                        <p>Realiza tus pedidos de agua en pocos toques. Elige entre todas nuestras presentaciones Yuraq
+                            y Kali.</p>
+                    </div>
+
+                    <div class="app-feature-card fade-up" style="animation-delay: 0.15s;">
+                        <div class="app-feature-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <h3>Seguimiento en Vivo</h3>
+                        <p>Monitorea el estado de tu entrega en tiempo real. Sabe exactamente cuándo llegará tu pedido.
+                        </p>
+                    </div>
+
+                    <div class="app-feature-card fade-up" style="animation-delay: 0.3s;">
+                        <div class="app-feature-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                                <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                                <line x1="12" y1="19" x2="12" y2="23"></line>
+                                <line x1="8" y1="23" x2="16" y2="23"></line>
+                            </svg>
+                        </div>
+                        <h3>Soporte Directo</h3>
+                        <p>Comunícate directamente con nuestro equipo de atención al cliente desde la aplicación.</p>
+                    </div>
+
+                    <div class="app-feature-card fade-up" style="animation-delay: 0.45s;">
+                        <div class="app-feature-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                                <line x1="1" y1="10" x2="23" y2="10"></line>
+                            </svg>
+                        </div>
+                        <h3>Historial de Pedidos</h3>
+                        <p>Consulta tu historial completo de pedidos y repítelos con un solo toque cuando lo desees.</p>
+                    </div>
+
+                    <div class="app-feature-card fade-up" style="animation-delay: 0.6s;">
+                        <div class="app-feature-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                        </div>
+                        <h3>Promociones Exclusivas</h3>
+                        <p>Accede a ofertas y descuentos especiales disponibles únicamente para usuarios de nuestra app.
+                        </p>
+                    </div>
+
+                    <div class="app-feature-card fade-up" style="animation-delay: 0.75s;">
+                        <div class="app-feature-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                                <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                            </svg>
+                        </div>
+                        <h3>Notificaciones</h3>
+                        <p>Recibe alertas sobre el estado de tu pedido, nuevos productos y ofertas personalizadas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How it Works -->
+        <section class="section-padding bg-light" id="como-funciona">
+            <div class="container">
+                <div class="section-title fade-up">
+                    <span
+                        style="color: var(--primary); font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Sencillo</span>
+                    <h2>¿Cómo Funciona?</h2>
+                    <p style="max-width: 600px; margin: 0 auto; font-size: 1.1rem;">Tres simples pasos para tener agua
+                        purificada de la mejor calidad en la puerta de tu hogar u oficina.</p>
+                </div>
+
+                <div class="steps-container">
+                    <div class="step-item fade-up">
+                        <div class="step-number">1</div>
+                        <h3>Descarga la App</h3>
+                        <p>Busca "Ekalmad" en Google Play Store e instala la aplicación en tu dispositivo Android.</p>
+                    </div>
+                    <div class="step-item fade-up" style="animation-delay: 0.2s;">
+                        <div class="step-number">2</div>
+                        <h3>Elige tus Productos</h3>
+                        <p>Navega por el catálogo completo de Yuraq y Kali. Selecciona tus presentaciones favoritas.</p>
+                    </div>
+                    <div class="step-item fade-up" style="animation-delay: 0.4s;">
+                        <div class="step-number">3</div>
+                        <h3>Recibe en tu Puerta</h3>
+                        <p>Confirma tu dirección, realiza el pago y recibe tu pedido directamente en la puerta de tu
+                            hogar.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download Banner -->
+        <section class="section-padding">
+            <div class="container fade-up">
+                <div class="download-banner">
+                    <div class="download-banner-content">
+                        <h2>Descárgala Ahora</h2>
+                        <p>Únete a las personas que ya disfrutan de la comodidad de pedir agua purificada Ekalmad desde
+                            su celular.</p>
+                        <a href="https://play.google.com/store" target="_blank" class="play-store-badge"
+                            id="banner-download-btn">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 2.302a1 1 0 0 1 0 1.38l-2.302 2.302L15.396 12l2.302-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302L5.864 2.658z" />
+                            </svg>
+                            <div class="badge-text">
+                                <small>Disponible en</small>
+                                <span>Google Play</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="download-banner-visual">
+                        <div class="phone-mockup">
+                            <div class="phone-screen">
+                                <div class="phone-screen-content">
+                                    <img src="/images/Logo_Ekalmad.jpeg" alt="Ekalmad App">
+                                    <h3>Ekalmad</h3>
+                                    <p>Pureza andina<br>en cada gota</p>
+                                    <span class="phone-screen-btn">Abrir</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Final CTA -->
+    <section class="cta-section">
+        <div class="container fade-up">
+            <h2>¿Prefieres Pedir por WhatsApp?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9;">También puedes contactarnos directamente
+                por WhatsApp para realizar tu pedido.</p>
+            <a href="https://wa.me/51906644944" target="_blank" class="btn btn-whatsapp"
+                style="font-size: 1.1rem; padding: 15px 30px;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                        d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                    </path>
+                </svg>
+                Pedir por WhatsApp al 906 644 944
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <app-footer></app-footer>
+
+    <!-- Scripts -->
+    <script src="/js/main.js"></script>
+    <script src="/js/components.js"></script>
+</body>
+
+</html>
