@@ -29,6 +29,13 @@ const footerHtml = `    <footer class="footer">
                     <h4 style="font-size: 1.5rem; letter-spacing: 1px;">EKALMAD</h4>
                     <p style="color: #9ca3af; margin-bottom: 20px;">Agua purificada producida con los más altos estándares de calidad en el corazón de los Andes.</p>
                     <p style="color: #9ca3af; font-size: 0.85rem;">Razón Social: Ekalmad E.I.R.L</p>
+                    <div style="margin-top: 15px; display: flex; align-items: center; gap: 12px;">
+                        <img src="/images/Logo_IndustriasGablayhos.jpeg" alt="Industrias Gablayhos" style="height: 45px; width: auto; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">
+                        <div>
+                            <p style="color: #9ca3af; font-size: 0.75rem; margin: 0; text-transform: uppercase; letter-spacing: 0.5px;">Un producto de</p>
+                            <p style="color: white; font-size: 0.9rem; margin: 0; font-weight: 500;">Industrias Gablayhos</p>
+                        </div>
+                    </div>
                 </div>
                 <div>
                     <h4>Nuestras Marcas</h4>
