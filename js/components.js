@@ -28,7 +28,7 @@ const footerHtml = `    <footer class="footer">
                 <div>
                     <h4 style="font-size: 1.5rem; letter-spacing: 1px;">EKALMAD</h4>
                     <p style="color: #9ca3af; margin-bottom: 20px;">Agua purificada producida con los más altos estándares de calidad en el corazón de los Andes.</p>
-                    <p style="color: #9ca3af; font-size: 0.85rem;">Razón Social: Ekalmad EIRL</p>
+                    <p style="color: #9ca3af; font-size: 0.85rem;">Razón Social: Ekalmad E.I.R.L</p>
                 </div>
                 <div>
                     <h4>Nuestras Marcas</h4>
@@ -65,7 +65,7 @@ const footerHtml = `    <footer class="footer">
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; <span id="current-year"></span> Ekalmad EIRL. Todos los derechos reservados.</p>
+                <p>&copy; <span id="current-year"></span> Ekalmad E.I.R.L. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>`;
